@@ -1,11 +1,10 @@
 use regex::Regex;
 
-pub fn run() {
+pub fn run(input: &str){
     println!("Executing day 3 part 1");
 
     let mut result: i32 = 0;
 
-    let input = include_str!("../inputs/03_actual.txt");
     let pattern = r"mul\((\d+),(\d+)\)";
     let re = Regex::new(pattern).unwrap();
 

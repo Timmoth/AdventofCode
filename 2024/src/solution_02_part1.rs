@@ -1,8 +1,8 @@
-pub fn run() {
+pub fn run(input: &str){
     println!("Executing day 2 part 1");
 
     let mut result: i32 = 0;
-    for line in include_str!("../inputs/02_actual.txt").lines() {
+    for line in input.lines() {
         let mut parts = line.split_whitespace();
         let prev: i32 = parts.next().unwrap().parse().unwrap();
         let curr: i32 = parts.next().unwrap().parse().unwrap();

@@ -1,9 +1,9 @@
-pub fn run() {
+pub fn run(input: &str){
     println!("Executing day 2 part 2");
 
     let mut result: i32 = 0;
 
-    for line in include_str!("../inputs/02_actual.txt").lines() {
+    for line in input.lines() {
         let levels: Vec<i32> = line
             .split_whitespace()
             .map(|num| num.parse().unwrap())

@@ -1,9 +1,9 @@
-pub fn run() {
+pub fn run(input: &str){
     println!("Executing day 5 part 2");
 
     let mut result: i32 = 0;
 
-    let input = include_str!("../inputs/05_actual.txt").replace("\r\n", "\n");
+    let input = input.replace("\r\n", "\n");
     let parts: Vec<&str> = input.split("\n\n").collect();
 
     let mut rules: Vec<Vec<bool>> = vec![vec![false; 100]; 100];

@@ -1,11 +1,11 @@
-pub fn run(){
+pub fn run(input: &str){
     println!("Executing day 1 part 2");
 
     let mut list_a: Vec<i32> = Vec::new();
     let mut counts: [i32; 100000] = [0; 100_000];
 
     let mut line_count = 0;
-    for line in include_str!("../inputs/01_actual.txt").lines(){
+    for line in input.lines(){
         let mut parts = line.split_whitespace();
         let a: i32 = parts.next().unwrap().parse().unwrap();
         let b: i32 = parts.next().unwrap().parse().unwrap();

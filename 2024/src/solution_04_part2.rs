@@ -1,9 +1,9 @@
-pub fn run() {
+pub fn run(input: &str){
     println!("Executing day 4 part 2");
 
     let mut result: i32 = 0;
 
-    let input: Vec<Vec<char>> = include_str!("../inputs/04_actual.txt")
+    let input: Vec<Vec<char>> = input
         .lines()
         .map(|line| line.chars().collect())
         .collect();
