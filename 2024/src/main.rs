@@ -10,6 +10,8 @@ mod solution_04_part1;
 mod solution_04_part2;
 mod solution_05_part1;
 mod solution_05_part2;
+mod solution_06_part1;
+mod solution_06_part2;
 
 fn main() {
     let args:Vec<String> = env::args().collect();
@@ -43,6 +45,8 @@ fn main() {
         (4, 2) => solution_04_part2::run(input),
         (5, 1) => solution_05_part1::run(input),
         (5, 2) => solution_05_part2::run(input),
+        (6, 1) => solution_06_part1::run(input),
+        (6, 2) => solution_06_part2::run(input),
         _ => {
             println!("Solution for day {} part {} not found.", day, part);
             std::process::exit(1);
