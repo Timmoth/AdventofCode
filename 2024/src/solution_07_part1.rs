@@ -1,5 +1,5 @@
 pub fn run(input: &str) {
-    println!("Executing day 7 part 2");
+    println!("Executing day 7 part 1");
 
     let mut result: i64 = 0;
     let mut lines: Vec<(i64, Vec<i64>)> = Vec::new();
