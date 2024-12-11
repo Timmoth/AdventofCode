@@ -16,6 +16,8 @@ mod solution_07_part1;
 mod solution_07_part2;
 mod solution_08_part1;
 mod solution_08_part2;
+mod solution_09_part1;
+mod solution_09_part2;
 mod solution_10_part1;
 mod solution_10_part2;
 mod solution_11_part1;
@@ -58,6 +60,8 @@ fn main() {
         (7, 2) => solution_07_part2::run(input),
         (8, 1) => solution_08_part1::run(input),
         (8, 2) => solution_08_part2::run(input),
+        (9, 1) => solution_09_part1::run(input),
+        (9, 2) => solution_09_part2::run(input),
         (10, 1) => solution_10_part1::run(input),
         (10, 2) => solution_10_part2::run(input),
         (11, 1) => solution_11_part1::run(input),
