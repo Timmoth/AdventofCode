@@ -1,3 +1,83 @@
+###############################
+# Advent of Code Inputs
+###############################
 /target
 /inputs
 input.txt
+*.input
+*.sample
+sample*.txt
+
+###############################
+# Build outputs
+###############################
+bin/
+obj/
+out/
+target/
+
+###############################
+# User-specific VS/VSCode/Rider
+###############################
+.vscode/
+.vscode-test/
+.idea/
+*.user
+*.suo
+*.userprefs
+
+###############################
+# .NET / NuGet
+###############################
+*.nupkg
+*.snupkg
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+###############################
+# Logs / Diagnostics
+###############################
+*.log
+*.trace
+*.stackdump
+
+###############################
+# Temporary / Cache Files
+###############################
+*.tmp
+*.temp
+*.cache
+*.swp
+*.swo
+
+###############################
+# OS-specific
+###############################
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+###############################
+# JetBrains Rider files
+###############################
+.idea/
+*.sln.iml
+
+###############################
+# Visual Studio files
+###############################
+*.vs/
+.vs/
+
+###############################
+# Other
+###############################
+/launchSettings.json
