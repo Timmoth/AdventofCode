@@ -6,11 +6,12 @@ public static class Day_01
     {
         timer.StartParsing();
 
-        var turns = new int[input.Length];
-        for (var j = 0; j < turns.Length; j++)
+        Span<int> turns = stackalloc int[input.Length];
+        for (var i = 0; i < input.Length; i++)
         {
-            var line = input[j];
-            turns[j] = line[0] == 'R' ? int.Parse(line.AsSpan()[1..]) : -int.Parse(line.AsSpan()[1..]);
+            ReadOnlySpan<char> line = input[i].AsSpan();
+            var val = AocHelpers.FastParseInt(line.Slice(1));
+            turns[i] = input[i][0] == 'R' ? val  : - val;
         }
         
         timer.StartExecuting();
@@ -18,19 +19,13 @@ public static class Day_01
         var zeroCount = 0;
         foreach (var t in turns)
         {
-            var oldPos = pos;
-
             // remaining turns
-            var semi = t % 100;
-            pos = oldPos + semi;
+            pos += t % 100;
 
             // does the turn wrap around?
-            var wrapOver = pos > 99;
-            var wrapUnder  = pos < 0;
-
-            if (wrapOver) pos -= 100;
-            else if (wrapUnder) pos += 100;
-
+            if (pos > 99) pos -= 100;
+            else if (pos < 0) pos += 100;
+            
             if(pos == 0) zeroCount++;
         }
 
@@ -44,11 +39,12 @@ public static class Day_01
     {
         timer.StartParsing();
 
-        var turns = new int[input.Length];
-        for (var j = 0; j < turns.Length; j++)
+        Span<int> turns = stackalloc int[input.Length];
+        for (var i = 0; i < input.Length; i++)
         {
-            var line = input[j];
-            turns[j] = line[0] == 'R' ? int.Parse(line.AsSpan()[1..]) : -int.Parse(line.AsSpan()[1..]);
+            ReadOnlySpan<char> line = input[i].AsSpan();
+            var val = AocHelpers.FastParseInt(line.Slice(1));
+            turns[i] = input[i][0] == 'R' ? val  : - val;
         }
         
         timer.StartExecuting();
